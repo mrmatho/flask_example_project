@@ -1,0 +1,204 @@
+:root {
+    --bg: #f3f7f6;
+    --surface: #ffffff;
+    --text: #1f2937;
+    --muted: #5b6473;
+    --border: #d6dde4;
+    --primary: #0f766e;
+    --primary-dark: #0b5f59;
+    --secondary-bg: #ecf3f2;
+    --secondary-text: #20524d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--text);
+    background: linear-gradient(180deg, #eef6f4 0%, var(--bg) 100%);
+}
+
+.page-shell {
+    width: min(980px, 92vw);
+    margin: 2.5rem auto;
+}
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 26px rgba(17, 24, 39, 0.08);
+}
+
+h1 {
+    margin: 0 0 0.5rem;
+    font-size: clamp(1.55rem, 2vw, 2rem);
+    line-height: 1.2;
+}
+
+.subtitle {
+    margin: 0 0 1.2rem;
+    color: var(--muted);
+}
+
+.actions {
+    margin: 0 0 1.2rem;
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+button,
+input[type="submit"] {
+    border: 0;
+    border-radius: 8px;
+    padding: 0.65rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: var(--primary);
+    color: #ffffff;
+    transition: background-color 0.18s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background: var(--primary-dark);
+}
+
+button.secondary {
+    background: var(--secondary-bg);
+    color: var(--secondary-text);
+    border: 1px solid #c9ddd9;
+}
+
+button.secondary:hover {
+    background: #e2eeeb;
+}
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.row-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.action-link {
+    display: inline-block;
+    text-decoration: none;
+    background: var(--secondary-bg);
+    color: var(--secondary-text);
+    border: 1px solid #c9ddd9;
+    border-radius: 8px;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.action-link:hover {
+    background: #e2eeeb;
+}
+
+.row-actions form {
+    margin: 0;
+}
+
+button.danger {
+    background: #b42318;
+}
+
+button.danger:hover {
+    background: #941d14;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 540px;
+}
+
+th,
+td {
+    padding: 0.7rem 0.75rem;
+    border-bottom: 1px solid #e6ebf0;
+    text-align: left;
+}
+
+th {
+    color: #314055;
+    font-size: 0.9rem;
+    letter-spacing: 0.01em;
+    background: #f8fbfc;
+}
+
+tr:hover td {
+    background: #f8fcfb;
+}
+
+.form-card {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.workout-form {
+    display: grid;
+    gap: 0.65rem;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+label.req::after {
+    content: " *";
+    color: #b91c1c;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.6rem 0.7rem;
+    font-size: 0.95rem;
+    color: var(--text);
+    background: #ffffff;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus {
+    border-color: var(--primary);
+    outline: 2px solid rgba(15, 118, 110, 0.18);
+    outline-offset: 1px;
+}
+
+.form-actions {
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 720px) {
+    .page-shell {
+        margin: 1.25rem auto;
+    }
+
+    .card {
+        padding: 1rem;
+        border-radius: 12px;
+    }
+
+    table {
+        min-width: 500px;
+    }
+}

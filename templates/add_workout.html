@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <main class="page-shell">
+        <section class="card form-card">
+            <h1>Add a Workout</h1>
+            <form action="/add" method="post" class="workout-form">
+                <label for="date" class="req">Date</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="exercise" class="req">Exercise</label>
+                <input type="text" id="exercise" name="exercise" required>
+
+                <label for="sets" class="req">Sets</label>
+                <input type="number" id="sets" name="sets" required>
+
+                <label for="reps" class="req">Reps</label>
+                <input type="number" id="reps" name="reps" required>
+
+                <label for="weight">Weight (kgs)</label>
+                <input type="number" id="weight" name="weight">
+
+                <label for="time">Time (minutes)</label>
+                <input type="number" id="time" name="time">
+
+                <div class="actions form-actions">
+                    <input type="submit" value="Add Workout">
+                    <button type="button" class="secondary" onclick="window.location.href='/'">
+                        Back to Home
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
