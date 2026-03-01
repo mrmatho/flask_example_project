@@ -1,15 +1,4 @@
-:root {
-    --bg: #f3f7f6;
-    --surface: #ffffff;
-    --text: #1f2937;
-    --muted: #5b6473;
-    --border: #d6dde4;
-    --primary: #0f766e;
-    --primary-dark: #0b5f59;
-    --secondary-bg: #ecf3f2;
-    --secondary-text: #20524d;
-}
-
+/* Base */
 * {
     box-sizing: border-box;
 }
@@ -18,32 +7,32 @@ body {
     margin: 0;
     min-height: 100vh;
     font-family: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    color: var(--text);
-    background: linear-gradient(180deg, #eef6f4 0%, var(--bg) 100%);
+    color: #1f2937;
+    background: #f3f7f6;
 }
 
+/* Layout */
 .page-shell {
     width: min(980px, 92vw);
     margin: 2.5rem auto;
 }
 
 .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 14px;
+    background: #ffffff;
+    border: 1px solid #d6dde4;
+    border-radius: 8px;
     padding: 1.5rem;
-    box-shadow: 0 10px 26px rgba(17, 24, 39, 0.08);
 }
 
 h1 {
     margin: 0 0 0.5rem;
-    font-size: clamp(1.55rem, 2vw, 2rem);
+    font-size: 1.85rem;
     line-height: 1.2;
 }
 
 .subtitle {
     margin: 0 0 1.2rem;
-    color: var(--muted);
+    color: #5b6473;
 }
 
 .actions {
@@ -53,6 +42,7 @@ h1 {
     flex-wrap: wrap;
 }
 
+/* Buttons and links */
 button,
 input[type="submit"] {
     border: 0;
@@ -61,19 +51,18 @@ input[type="submit"] {
     font-size: 0.95rem;
     font-weight: 600;
     cursor: pointer;
-    background: var(--primary);
+    background: #0f766e;
     color: #ffffff;
-    transition: background-color 0.18s ease;
 }
 
 button:hover,
 input[type="submit"]:hover {
-    background: var(--primary-dark);
+    background: #0b5f59;
 }
 
 button.secondary {
-    background: var(--secondary-bg);
-    color: var(--secondary-text);
+    background: #ecf3f2;
+    color: #20524d;
     border: 1px solid #c9ddd9;
 }
 
@@ -95,8 +84,8 @@ button.secondary:hover {
 .action-link {
     display: inline-block;
     text-decoration: none;
-    background: var(--secondary-bg);
-    color: var(--secondary-text);
+    background: #ecf3f2;
+    color: #20524d;
     border: 1px solid #c9ddd9;
     border-radius: 8px;
     padding: 0.4rem 0.75rem;
@@ -120,6 +109,7 @@ button.danger:hover {
     background: #941d14;
 }
 
+/* Table */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -149,6 +139,7 @@ tr:hover td {
     margin: 0 auto;
 }
 
+/* Form */
 .workout-form {
     display: grid;
     gap: 0.65rem;
@@ -168,18 +159,18 @@ input[type="text"],
 input[type="number"],
 input[type="date"] {
     width: 100%;
-    border: 1px solid var(--border);
+    border: 1px solid #d6dde4;
     border-radius: 8px;
     padding: 0.6rem 0.7rem;
     font-size: 0.95rem;
-    color: var(--text);
+    color: #1f2937;
     background: #ffffff;
 }
 
 input[type="text"]:focus,
 input[type="number"]:focus,
 input[type="date"]:focus {
-    border-color: var(--primary);
+    border-color: #0f766e;
     outline: 2px solid rgba(15, 118, 110, 0.18);
     outline-offset: 1px;
 }
@@ -195,7 +186,6 @@ input[type="date"]:focus {
 
     .card {
         padding: 1rem;
-        border-radius: 12px;
     }
 
     table {
