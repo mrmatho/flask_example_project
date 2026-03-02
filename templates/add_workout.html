@@ -13,7 +13,7 @@
             <h1>Add a Workout</h1>
             <form action="/add" method="post" class="workout-form">
                 <label for="date" class="req">Date</label>
-                <input type="date" id="date" name="date" required>
+                <input type="date" id="date" name="date" value="{{ default_date }}" required>
 
                 <label for="exercise" class="req">Exercise</label>
                 <input type="text" id="exercise" name="exercise" required>

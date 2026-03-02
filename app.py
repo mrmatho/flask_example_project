@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 from csv import DictReader, DictWriter
+from datetime import date
 
 app = Flask(__name__)
 
@@ -61,7 +62,7 @@ def add_workout():
 
         return redirect(url_for('index'))
     
-    return render_template('add_workout.html')
+    return render_template('add_workout.html', default_date=date.today().isoformat())
 
 
 # Show the edit form for one workout on GET, and save updates on POST.
