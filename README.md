@@ -2,17 +2,21 @@
 
 This is a simple Flask application that allows users to track their workouts. Users can add new workouts, view their workout history, and see a summary of their progress. The application uses a CSV file to store workout data.
 ![Workout Tracker Screenshot](screenshot.png)
+
 ## Usage
 
 1. Clone the repository (if using git) or download and unzip to the project directory.
 2. Install the required dependencies:
-   ```
-   pip install flask
-   ```
+
+  ```
+    pip install flask
+  ```
+
 3. Run the application:
-   ```
-    python app.py
-    ```
+
+  ```
+      python app.py
+  ```
 
 ## Reminder
 
