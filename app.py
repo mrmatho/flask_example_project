@@ -61,7 +61,7 @@ def add_workout():
         save_workouts_to_csv(workouts)
 
         return redirect(url_for('index'))
-    
+    # Set the default date to today for convenience when adding a new workout.
     return render_template('add_workout.html', default_date=date.today().isoformat())
 
 
